@@ -103,6 +103,8 @@ Temperature是用来调整模型输出的概率分布情况，如果Temperature=
 #### 3. ChatGPT如何实现任务泛化和能力涌现的
 #### 4. LoRA的作用和原理
 
+![My Image](1.png)
+
 Low-Rank Adaptation
 
 #### 5. LoRA的矩阵怎么初始化？为什么要初始化为全0？
