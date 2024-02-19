@@ -167,6 +167,9 @@ BERT模型采用的是WordPiece模型，这是BPE的一个变体。WordPiece与B
 Low-Rank Adaptation
 
 #### 5. LoRA的矩阵怎么初始化？为什么要初始化为全0？
+
+初始化为0使得fine tuning开始的时候，模型基本保持原始参数状态，平滑过渡到特定任务。避免破坏预训练知识，防止随机的初始化对预训练模型输出产生较大影响
+
 #### 6. 为什么self-attention层LoRA只在Q和K上添加，而不在V上添加
 
 ##### 简单来说，就是Q和K的相似度运算才是attention机制中获取特征的关键，和V相乘的运算不相干，为了效率，只在Q和K上加入LoRA
