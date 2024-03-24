@@ -5,3 +5,4 @@
 Otherwise, Nan value will be raised.
 * Create Word2idx Dict: Training data and testing data should share the same Dict from training data.
 * NMT Loss function should ignore (index == padding).
+* PyTorch -> Float32
