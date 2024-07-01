@@ -6,6 +6,7 @@ Otherwise, Nan value will be raised.
 * Create Word2idx Dict: Training data and testing data should share the same Dict from training data.
 * NMT Loss function should ignore (index == padding).
 * PyTorch -> Float32
+* Time dimension in nn.LSTM: By default, PyTorch’s **nn.LSTM module assumes the input to be sorted as [seq_len, batch_size, input_size]**. Make sure that you do not confuse the sequence length and batch dimension. The **LSTM would still run without an error, but will give you wrong results**. If you want to change this behavior to accepting an input shape of [batch_size, seq_len, input_size], you can specify the argument batch_first=True when creating the LSTM object.
 
 
 ### General Pytorch
