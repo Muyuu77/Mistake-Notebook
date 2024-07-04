@@ -11,3 +11,7 @@ Otherwise, Nan value will be raised.
 
 ### General Pytorch
 * The loss module nn.CrossEntropyLoss in PyTorch performs two operations: nn.LogSoftmax and nn.NLLLoss. Hence, the input to this loss module should be the output of your last linear layer. **Do not apply a softmax before the Cross-Entropy loss**. Otherwise, PyTorch will apply a log-softmax on your softmax outputs, which will significantly worsen the performance, and give you headaches. If you use the loss module nn.NLLLoss, you need to apply the log-softmax yourself. NLLLoss requires log-probabilities, not plain probabilities. Hence, make sure to apply nn.LogSoftmax or nn.functional.log_softmax, and not nn.Softmax.
+
+
+### Fine-tuning LLMs
+* QLoRA -> adds trainable weights to all the linear layers in the transformer architecture
