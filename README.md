@@ -15,3 +15,4 @@ Otherwise, Nan value will be raised.
 
 ### Fine-tuning LLMs
 * QLoRA -> adds trainable weights to all the linear layers in the transformer architecture
+* BitsAndBytesConfig -> 控制训练时模型参数储存精度和计算精度，load_in_4bit=True -> 牺牲一定的储存精度来显著减少LLM训练内存占用
