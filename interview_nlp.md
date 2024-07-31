@@ -288,7 +288,7 @@ Post-LN（Post-Layer Normalization）：这是Transformer原始设计中的Layer
 当使用Pre-LN结构时，warm-up阶段已不再是必需，并且Pre-LN结构可以大幅提升Transformer的收敛速度。对于机器翻译任务（IWSLT/WMT)，不需要warm-up的Pre-LN结构可以比Post-LN收敛快1倍左右，而在BERT上，Pre-LN在下游任务上达到和Post-LN相同的性能也只需要后者迭代轮数的1/3左右，并且最终的效果也更好。
 
 
-![My Image](2.png)
+![My Image](img/2.png)
 
 
 #### 9. 模型初始化方法，尤其是He初始化
@@ -431,7 +431,7 @@ HMM模型：通过训练得到的模型，可以识别出词语的边界，特�
 #### 3. ChatGPT如何实现任务泛化和能力涌现的
 #### 4. LoRA的作用和原理
 
-![My Image](1.png)
+![My Image](img/1.png)
 
 Low-Rank Adaptation
 
@@ -493,7 +493,7 @@ RAG是一种结合了信息检索和文本生成能力的模型：GPT+额外的�
 #### 11. RLHF流程？？
 
 
-![My Image](3.png)
+![My Image](img/3.png)
 
 1. **预训练GPT模型（模型A）**：
    这是训练开始前的原始语言模型，它已经通过大量的数据进行了预训练，学会了语言的基本模式和结构。
