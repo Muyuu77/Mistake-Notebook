@@ -511,6 +511,14 @@ RAG是一种结合了信息检索和文本生成能力的模型：GPT+额外的�
 
 注意，这个过程可能涉及到一些技术细节，比如如何确切地定义reward模型的结构，或者如何平衡探索（生成多样化的回答）和利用（生成高评分的回答）等。但总体上，你对RLHF的描述是正确的。
 
+
+#### 12. 为什么现在大多数大模型都是decoder-only？
+
+1. 节约计算资源，不需要encoder部分的计算
+2. decoder-only模型的泛化性更好，在很多下游任务中zero-shot的表现更好
+3. 支持KV-cache，对多轮对话场景更友好
+4. 对prompt tuning更敏感，prompt直接作用于decoder的每一层参数，不用需要encoder进行编码->更好的few-shot learning
+
 ## 其他NLP模型
 #### 1. BiLSTM和CRF的原理和区别。
 
