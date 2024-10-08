@@ -1067,24 +1067,23 @@ z = torch.stack((x, y), dim=1)  # 结果形状为 [2, 2, 3]
 
 *args允许传递任意数量的非关键字参数给函数，将这些参数收集为一个元组
 
-、、、
+```
 def my_function(*args):
     for arg in args:
         print(arg)
 
 my_function(1, 2, 3)  
-、、、
+```
 
 **kwargs允许传递任意数量的关键字参数（键值对），将这些参数收集成一个字典
 
-、、、
+```
 def my_function(**kwargs):
     for key, value in kwargs.items():
         print(f"{key} = {value}")
 
 my_function(name="Alice", age=30, job="Engineer")
-、、、
-
+```
 
 
 
