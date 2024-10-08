@@ -1063,8 +1063,27 @@ z = torch.stack((x, y), dim=1)  # 结果形状为 [2, 2, 3]
 如果一个张量在内存中是连续的（contiguous），那么它的元素在物理上是按照行优先（row-major）顺序存储的。
 而 transpose 只是**改变了张量的视图**（即如何解释内存中的数据），但不会重新排列内存中的数据。因此，转置后的**张量通常不是连续的**
 
+#### 15. *arg和**kwargs
 
+*args允许传递任意数量的非关键字参数给函数，将这些参数收集为一个元组
 
+、、、
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3)  
+、、、
+
+**kwargs允许传递任意数量的关键字参数（键值对），将这些参数收集成一个字典
+
+、、、
+def my_function(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key} = {value}")
+
+my_function(name="Alice", age=30, job="Engineer")
+、、、
 
 
 
