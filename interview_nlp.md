@@ -1,7 +1,9 @@
 ## Transformer
-#### 1. BERT基本结构
+#### 1. BERT/GLM基本结构
 
-Transformer的Encoder，PE + Self-attention + layernorm + (residual + FFN)
+BERT:Transformer的Encoder，PE + Self-attention + layernorm + (residual + FFN)
+
+GLM:Encoder+Decoder结构，同时实现MLM任务和Prefix-LM Generation任务。通过二维位置编码（全局绝对编码+SPAN内相对位置编码）来实现生成和空白填空两个训练目标，在做Attention时，原始的序列只能看到自己，被MASK的生成的词能看到自己和之前的所有tokens
 
 #### 2. Self-Attention公式
 
